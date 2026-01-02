@@ -31,14 +31,18 @@ It also includes a **simple, best-effort file carver** for common types.
 
 ## Quick Start
 ```bash
-# 1) (optional) Create venv
-py -3 -m venv .venv && .venv\Scripts\activate
-
-# 2) Install dependencies
+# 1) Install dependencies
 pip install -r requirements.txt
 
-# 3) Run
+# 2) Execute
 python afdt.py
+
+# 3) How to run
+Enter drive letter for carving
+Click on Carving button, wait for process to finish or press stop button
+Enter drive letter/folder path
+Click on Start Analysis button, wait for process to finish
+Click on View Dashboard button or Export Report button to see concise forensic report(in chosen format)
 ```
 
 ## Build a Standalone EXE (PyInstaller)
@@ -57,4 +61,3 @@ pyinstaller --noconfirm --onefile --add-data "signatures;signatures" --add-binar
   professional carving tools (e.g., Magnet Axiom, X-Ways, Autopsy/TSK, etc.).
 - Timestomp detection relies on `MFTECmd.exe` CSV output; results are heuristic indicators for deeper review.
 - Always validate findings with secondary tools and procedures.
->>>>>>> 3dcd643 (Initial commit - AFDT project)
